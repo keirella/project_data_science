@@ -38,7 +38,7 @@ label_hasil = {
 st.title("Sistem Deteksi Dini Tingkat Obesitas")
 st.write("Aplikasi ini menggunakan **Random Forest (Akurasi 99%)** untuk memprediksi tingkat obesitas berdasarkan kebiasaan hidup.")
 
-st.sidebar.header("pROJEK DATA SCIENCE")
+st.sidebar.header("PROJEK DATA SCIENCE")
 
 with st.form("obesity_form"):
     st.subheader("1. Data Fisik")
