@@ -1,8 +1,10 @@
+
 import streamlit as st
 import pandas as pd
 import numpy as np
 from sklearn.ensemble import RandomForestClassifier
 import base64
+import os
 
 st.set_page_config(page_title="Prediksi Obesitas", layout="centered")
 
@@ -16,7 +18,9 @@ def load_css(file, bg_img=None):
         css = css.replace("BG_IMAGE", b64)
     st.markdown(f"<style>{css}</style>", unsafe_allow_html=True)
 
-load_css("style.css", "image/lucu.png")
+# memastikan path file selalu benar
+DIR = os.path.dirname(__file__)
+load_css(os.path.join(DIR, "style.css"), os.path.join(DIR, "image/lucu.png"))
 
 def render_header(text, with_icon=True):
     st.markdown(
